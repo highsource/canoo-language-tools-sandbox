@@ -57,7 +57,7 @@ public class InflAnalyzerGeneratorTest {
 			IAnswer answer = inflAnalyzerGenerator.generateForms("strasse", "(Cat N)(Num SG)", true);
 
 			if (answer.hasResult()) {
-				System.out.println("  Query: " + answer.getQuery());
+				System.out.println("  Query: " + answer.getQuery().getForm() + " " + answer.getQuery().getFilter());
 				for (IForm f : answer.getForms()) {
 					System.out.println("  Form: " + f.getString());
 	                List<IFeatures> listOfFeatures = f.getListOfFeatures();
